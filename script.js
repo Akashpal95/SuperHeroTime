@@ -239,7 +239,7 @@ span.onclick = function() {
 
  //When document load for first time
  window.onload = function(){
-     /* fetchSuperHeroesByName('a') */;
+     fetchSuperHeroesByName('a');
      favListID = getCookie();
      console.log(typeof(favListID));
  }
