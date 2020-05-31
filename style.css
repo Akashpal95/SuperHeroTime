@@ -1,0 +1,176 @@
+* {
+    margin:0;
+}
+body{
+    color:white;
+    background-color: #262627;
+}
+main{
+    margin-top:50px;
+    padding:20px;
+    overflow:auto;
+}
+/*Header styling*/
+header{
+    /* margin:10px auto; */
+    /* text-align: center; */
+    padding-top:10px;
+    box-shadow: 0px 2px 9px 0px black;
+    position:fixed;
+    width:100%;
+    top:0;
+    background-color: #262627;
+    z-index:1;
+}
+header p{
+    text-align: center;
+}
+/*Styling Navigation bar*/
+nav{
+    display:flex;
+    justify-content: space-between;
+    z-index: 1;
+    align-items :center;
+}
+ul{
+    display:flex;
+    justify-content: space-between;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+    margin:0 10px;
+}
+/*Adding search box styling*/
+
+.search_box_container{
+	width:20%;
+	vertical-align: middle;
+    position: relative;
+    margin:5px 10px;
+	/*display: flex;*/
+
+}
+.search_box{
+	width:100%;
+	height: 5.5vh;
+	font-size:0.8rem ;
+	padding-left:40px;
+	padding-right:40px;
+	background-color: black;
+	border:none;
+	color:white;
+	border-radius: 10px;
+	float:left;
+}
+.search_icon{
+	position: absolute;
+	top:0%;
+	z-index: 1;
+}
+.search_icon i, .speech_icon i{
+	font-size:0.9rem;
+	height: 100%;
+	/*font-weight: 100;*/
+	padding:10px;
+}
+input:focus{
+	outline:none;
+}
+/*Super Hero Shelf Designing*/
+.all-img-container{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+.img-card{
+    width:150px;
+    height:230px;
+    margin:20px;
+    position: relative;
+}
+.superhero-img{
+    width:150px;
+    height: 200px;
+    border-radius:5px;
+    border:2px solid rgba(101, 186, 255, 0);
+}
+/* .superhero-img:hover{
+    filter:brightness(80%);
+    border:2px solid rgb(101, 186, 255);
+}
+.superhero-img:hover .favrt-icon{
+    display: block;
+} */
+.favrt-icon{
+    position:absolute;
+    top:10px;
+    left:10px;
+    /* color:rgb(204, 72, 63); */
+    /* display:none; */
+}
+/* The Modal (For personalised superhero details)) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    /* z-index: 1; Sit on top */
+    /* padding-top: 100px; Location of the box */
+    left: 0;
+    top: 0px;
+    padding-top:60px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(38, 40, 46, 0.945); /* Black w/ opacity */
+    line-height: 1.5rem;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    /* margin: auto; */
+    /* padding: 20px; */
+    /* border: 1px solid #888; */
+    width:100%;
+    height:70%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position:fixed;
+    top:70px;
+    right:0;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+.details-container{
+    display:flex;
+    justify-content: space-around;
+}
+.details{
+    flex-grow:2;
+    margin:30px 0;
+}
+.bio-details ul{
+    display:flex;
+    flex-direction: column;
+}
+
+
+  /*Styling personalised images*/
+  .profile-img{
+      width:30%;
+      height:80%;
+      border-radius: 5px;
+      margin:30px;
+  }

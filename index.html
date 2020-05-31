@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <p>SuperHero Time</p>
+        <!-- Navigation bar -->
+        <nav>
+            <!-- Navigation Links -->
+            <ul>
+                <li id="home">Home</li>
+                <li id="fav">Favourites</li>
+            </ul>
+            <!-- Search box -->
+            <div class="search_box_container">
+                <span class="search_icon color-white" id="search-button">
+                    <i class="fa fa-search searchIcon"></i>
+                </span>
+                <input class="search_box" id ="search" type="search" name="search" placeholder="search" spellcheck="false" >
+            </div>
+        </nav>
+    </header>
+    <main >
+        <div class="all-img-container">
+        <div class="img-card" id="644">
+            <i class="fas fa-heart favrt-icon"></i>
+            <img class="superhero-img" src="https://www.superherodb.com/pictures2/portraits/10/100/791.jpg">
+            <p class="superhero-name">Super Man</p>
+            <p class="real-name">Clark Kent</p>
+        </div>
+        </div>
+        <!-- Superhero Page -->
+        <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <div class="details-container">
+                    <img class="profile-img" src= "https://www.superherodb.com/pictures2/portraits/10/100/791.jpg">
+                    <div class="details">
+                        <h1>Supermn</h1>
+                        <div class="bio-details">
+                                <p>Biography:</p>
+                                <ul>
+                                </ul>
+                        </div>
+                        <div class="power-details">
+                            <p>PowerStats</p>
+                            <div class="stat-container">
+                                <p>Stat:StatValue</p>
+                                
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
+    </main>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
