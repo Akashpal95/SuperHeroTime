@@ -10,5 +10,6 @@ website which is hosted here at our beloved github.
 <ul>
 <li>Put all the files in the same folder.
 <li>Put styling sheet and js script paths properly.
+<li>Remember that cookies doesn't work for the website if it is not hosted.
 <li>Give yourself a pat in the back.(self-motivation is important XD)
 </ul>
