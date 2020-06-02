@@ -30,7 +30,7 @@ function getCookie() {
   }
 function setCookie(){
 		//console.log(JSON.stringify(favListID));
-    document.cookie = `name=${JSON.stringify(favListID)};expires= Thu, 2 June 2020 02:40:00 UTC; path=/`;
+    document.cookie = `name=${JSON.stringify(favListID)};expires= Thu, 30 June 2020 02:40:00 UTC; path=/`;
     // document.cookie = "name=akash;expires=Thu, 2 June 2020 02:40:00 UTC;path=/";
     //console.log(getCookie('name'));
     //console.log(document.cookie);
