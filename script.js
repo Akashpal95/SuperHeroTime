@@ -243,7 +243,13 @@ span.onclick = function() {
  //When document load for first time
  window.onload = function(){
      fetchSuperHeroesByName('a');
-     favListID = getCookie();
+     var tempfavListID = getCookie();
+     if(typeof(tempfavListID) == 'string'){
+        favListID = []
+     }
+    else{
+        favListID = tempfavListID
+    }
      console.log(typeof(favListID));
  }
 
