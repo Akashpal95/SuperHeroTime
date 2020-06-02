@@ -209,13 +209,16 @@ function showSuperHeroDetails(superHero){
     let detailsContainer = modal.children[1].children[1];
     let bioDetailsList = detailsContainer.children[1].children[1];
     let powerDetailsList = detailsContainer.children[2].children[1];
-    // console.log(bioDetails.children[1]);
+    console.log(bioDetailsList);
+    bioDetailsList.innerHTML ="";
+    powerDetailsList.innerHTML = "";
     for (each of Object.keys(superHero.biography)){
         var point =  document.createElement('li');
         point.appendChild(document.createTextNode(`${each} : ${superHero.biography[each]}`));
         // point.innerText = `${each} : ${superHero.biography[each]}`;
         bioDetailsList.append(point);
     }
+    
     for (each of Object.keys(superHero.powerstats)){
         var point =  document.createElement('li');
         point.appendChild(document.createTextNode(`${each} : ${superHero.powerstats[each]}`));
