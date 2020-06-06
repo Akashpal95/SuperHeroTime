@@ -90,7 +90,7 @@ function showFavouriteSuperHeros(){
     let allUrlRequests=[];
     let superHeroUrls = [];
     for(eachID of favListID){
-        superHeroUrls.push(`https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/1571199179705402/${eachID}`)
+        superHeroUrls.push(`https://superheroapi.com/api.php/1571199179705402/${eachID}`)
     }
     superHeroUrls.forEach(
         (userUrl) => {
@@ -125,7 +125,7 @@ function removeFromFavourite(cardDom){
 
 //HTTP call to fetch superheroes by name from API
 function fetchSuperHeroesByName(name){
-    fetch(`https://cors-anywhere.herokuapp.com/https://superheroapi.com/api.php/1571199179705402/search/${name}`)
+    fetch(`https://superheroapi.com/api.php/1571199179705402/search/${name}`)
         .then(function(response){
             return response.json();
         })
@@ -139,7 +139,7 @@ function fetchSuperHeroesByName(name){
         });
 }
 function fetchSuperHeroesByID(id){
-    fetch(`https://cors-anywhere.herokuapp.com/https://superheroapi.com/api.php/1571199179705402/${id}`)
+    fetch(`https://superheroapi.com/api.php/1571199179705402/${id}`)
         .then(function(response){
             return response.json();
         })
