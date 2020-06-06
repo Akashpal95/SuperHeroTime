@@ -12,6 +12,7 @@ var span = document.getElementsByClassName("close")[0];
 
 
 dynamicEventSetter();
+
 function getCookie() {
 		var cname = 'name';
     var name = cname + "=";
@@ -29,11 +30,7 @@ function getCookie() {
     return "";
   }
 function setCookie(){
-		//console.log(JSON.stringify(favListID));
     document.cookie = `name=${JSON.stringify(favListID)};expires= Thu, 30 June 2020 02:40:00 UTC; path=/`;
-    // document.cookie = "name=akash;expires=Thu, 2 June 2020 02:40:00 UTC;path=/";
-    //console.log(getCookie('name'));
-    //console.log(document.cookie);
 }
 
 function dynamicEventSetter(){
@@ -64,9 +61,6 @@ function dynamicEventSetter(){
 }
 //To display all the fetched images
 function showSuperHeroes(superHeroList){
-    // superHeroList = superHeroData
-    // console.log(superHeroList);
-    // console.log(Object.keys(superHeroList[0].biography));
     $('.all-img-container').empty();
     for(each of superHeroList){
         let newCard=newCardDom(each);
@@ -98,8 +92,6 @@ function showFavouriteSuperHeros(){
     for(eachID of favListID){
         superHeroUrls.push(`https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/1571199179705402/${eachID}`)
     }
-    // console.log(superHeroUrls);
-
     superHeroUrls.forEach(
         (userUrl) => {
             allUrlRequests.push(getSuperHerosById(userUrl));
@@ -118,7 +110,6 @@ function storeSuperHeroesToFavourite(cardDom){
     favListID.push(cardDom.id);
     setCookie();
     console.log('Inside add');
-    // console.log(favListID);
 }
 //Removing from favourites list
 function removeFromFavourite(cardDom){
@@ -129,14 +120,12 @@ function removeFromFavourite(cardDom){
     }
     setCookie();
     console.log('Inside Remove');
-    // console.log(favListID);
 }
 
 
 //HTTP call to fetch superheroes by name from API
 function fetchSuperHeroesByName(name){
-    // console.log(name);
-    fetch(`https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/1571199179705402/search/${name}`)
+    fetch(`https://cors-anywhere.herokuapp.com/https://superheroapi.com/api.php/1571199179705402/search/${name}`)
         .then(function(response){
             return response.json();
         })
@@ -150,14 +139,11 @@ function fetchSuperHeroesByName(name){
         });
 }
 function fetchSuperHeroesByID(id){
-    // console.log(id);
-    fetch(`https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/1571199179705402/${id}`)
+    fetch(`https://cors-anywhere.herokuapp.com/https://superheroapi.com/api.php/1571199179705402/${id}`)
         .then(function(response){
             return response.json();
         })
         .then(function(data){
-            // showSuperHeroes( data.results);
-            // console.log(data);
             showSuperHeroDetails( data);
         })
         .catch(function(){
@@ -178,13 +164,10 @@ $('#search-button').click(function(e){
 });
 
 // event listener ta check for changes in search box
-
 function searchSuperHero(){
     let name = $('#search').val();
     if(name ===""){
-        // window.alert("Invalid Input");
         name='a';
-        // return;
     }
     fetchSuperHeroesByName(name);
 }
