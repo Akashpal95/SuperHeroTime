@@ -1,6 +1,9 @@
+( function() {
 var listToDisplay;
 var favList=[];
 var favListID = [];
+var allSuperHeroList = []
+var onloadFlag = true
 var homeButton = document.getElementById('home');
 var visitFavButton = document.getElementById('fav');
 var searchInput = document.getElementById('search');
@@ -125,11 +128,23 @@ function removeFromFavourite(cardDom){
 
 //HTTP call to fetch superheroes by name from API
 function fetchSuperHeroesByName(name){
+    console.log('coming here');
+    if(allSuperHeroList.length > 0 && name === "a"){
+        // console.log('Inside');
+        console.log(allSuperHeroList)
+        showSuperHeroes(allSuperHeroList);
+        return;
+    }
+    // console.log("Fetching...");
     fetch(`https://superheroapi.com/api.php/1571199179705402/search/${name}`)
         .then(function(response){
             return response.json();
         })
         .then(function(data){
+            if(onloadFlag){
+            allSuperHeroList = data.results;
+            onloadFlag = false;
+            }
             showSuperHeroes( data.results);
             return;
         })
@@ -247,3 +262,4 @@ visitFavButton.onclick = function(){
 searchInput.onkeyup = function(){
     setTimeout(searchSuperHero, 500);
 };
+})();
