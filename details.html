@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Superhero</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+            <p>SuperHero Time</p>
+            <!-- Navigation bar -->
+            <nav>
+                <!-- Navigation Links -->
+                <ul>
+                    <li id="home"><a href="index.html">Home</a></li>
+                    <li id="fav"><a href="favourites.html">Favourites</a></li>
+                </ul>
+                <!-- Search box -->
+                <div class="search_box_container" style="visibility:hidden;">
+                    <span class="search_icon color-white" id="search-button">
+                        <i class="fa fa-search searchIcon"></i>
+                    </span>
+                    <input class="search_box" id ="search" type="search" name="search" placeholder="search" spellcheck="false" >
+                </div>
+            </nav>
+        </header>
+    <div class="details-container">
+        <img class="profile-img" src= "loading.gif">
+        <div class="details">
+            <h1 style="margin:10px;"></h1>
+            <div class="bio-details">
+                    <h4 style="color:gray">Biography:</h4>
+                    <ul>
+                    </ul>
+            </div>
+            <div class="power-details">
+                <h4 style="color:gray">PowerStats:</h4>
+                    <ul>
+
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="common_script.js"></script>
+    <script src="details_script.js"></script>
+</body>
+</html>

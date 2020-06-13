@@ -4,13 +4,27 @@
 body{
     color:white;
     background-color: #262627;
-    font-family:sans-serif;
+    font-family:monospace;
+    font-size:1.4rem;
 }
 main{
     margin-top:100px;
     padding:20px;
     overflow:auto;
 }
+a{
+    text-decoration: none;
+    color:inherit;
+}
+/* a:link{
+    color:none;
+}
+a:visited{
+    color:none;
+}
+a:-webkit-any-link{
+    color:none;
+} */
 /*Header styling*/
 header{
     /* margin:10px auto; */
@@ -25,6 +39,7 @@ header{
 }
 header p{
     text-align: center;
+    font-weight: 600;
 }
 /*Styling Navigation bar*/
 nav{
@@ -36,11 +51,15 @@ nav{
 ul{
     display:flex;
     justify-content: space-between;
+    font-size: 1rem;
 }
 li{
     list-style: none;
     cursor: pointer;
     margin:0 10px;
+}
+.blue{
+    color:rgb(0, 132, 255);
 }
 /*Adding search box styling*/
 
@@ -48,7 +67,7 @@ li{
 	width:20%;
 	vertical-align: middle;
     position: relative;
-    margin:5px 10px;
+    margin:5px 20px;
 	/*display: flex;*/
 
 }
@@ -73,7 +92,7 @@ li{
 	font-size:0.9rem;
 	height: 100%;
 	/*font-weight: 100;*/
-	padding:10px;
+	padding:7px;
 }
 input:focus{
 	outline:none;
@@ -91,13 +110,23 @@ input:focus{
     position: relative;
     /* border:4px solid rgba(56, 101, 250, 0); */
 }
+/* .img-card:hover{
+    border:4px solid rgb(75, 138, 253);
+} */
 
 .superhero-img{
     width:150px;
     height: 200px;
     border-radius:5px;
-    /* border:2px solid rgba(101, 186, 255, 0); */
+    border:2px solid rgba(101, 186, 255, 0);
     box-shadow: 0px 0px 7px 2px #00000099;
+}
+.superhero-img:hover{
+    border:2px solid rgb(75, 138, 253);
+}
+.superhero-name{
+    font-size: 1em;
+    /* font-family: sans-serif; */
 }
 .real-name{
     font-size:0.8rem;
@@ -114,56 +143,15 @@ input:focus{
     position:absolute;
     top:10px;
     left:10px;
+    font-size: 0.8rem;
     /* color:rgb(204, 72, 63); */
     /* display:none; */
 }
-/* The Modal (For personalised superhero details)) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    /* z-index: 1; Sit on top */
-    /* padding-top: 100px; Location of the box */
-    left: 0;
-    top: 0px;
-    padding-top:60px;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(38, 40, 46, 0.945); /* Black w/ opacity */
-    line-height: 1.5rem;
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    /* margin: auto; */
-    /* padding: 20px; */
-    /* border: 1px solid #888; */
-    width:100%;
-    height:70%;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    position:fixed;
-    top:100px;
-    right:0;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+
 .details-container{
     display:flex;
     justify-content: space-around;
+    margin-top: 50px;
 }
 .details{
     flex-grow:2;
